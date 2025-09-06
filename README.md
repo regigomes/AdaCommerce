@@ -1,47 +1,57 @@
-# Ada Commerce 
+# Ada Commerce - E-Commerce
+Bem-vindo ao projeto **Ada Commerce**! Este é um projeto básico de e-commerce feito em **Java**, e é uma aplicação simples de e-commerce desenvolvida com foco em conceitos de Programação Orientada a Objetos (POO), Generics, Interfaces e Repositórios,  ideal para quem está começando a aprender programação e orientação a objetos. Esta aplicação foi criada para o curso de Backend-java da Adatech.
 
-Este é um projeto criado no curso de Backend - Java, e simula um sistema de e-commerce básico, implementado com os princípios de Programação Orientada a Objetos (POO) em Java.
-O objetivo principal é demonstrar um fluxo de compra e venda simplificado, utilizando uma base de dados em memória e aplicando conceitos como **Generic** e **Interfaces**.
+## 🎯 Objetivo
+Simular um sistema simples de e-commerce com as seguintes funcionalidades:
+- Cadastro de clientes e produtos
+- Criação de pedidos
+- Adição e remoção de itens
+- Pagamento e entrega
 
-## Tecnologias Utilizadas
-- Java 17+
-- Maven ou Gradle
-- Orientação a Objetos
-- Estruturas de Dados em memória (ArrayList)
+## 🛠️ Funcionalidades
+✔️Cadastro de Clientes e Produtos.
+✔️Gerenciamento de Vendas com múltiplos itens.
+✔️Cálculo do total da venda.
+✔️Alteração do status da venda (Aberto → Aguardando Pagamento → Pago → Finalizado).
+✔️Simulação de envio de notificações por e-mail.
+✔️Implementação de repositório genérico com armazenamento em memória.
 
-## Funcionalidades
-O sistema oferece as seguintes funcionalidades principais:
+## 💻 Tecnologias Utilizadas
+✔️Java 17+
+✔️POO (Classes, Objetos, Encapsulamento)
+✔️Interfaces e Generics
+✔️Coleções (List, ArrayList)
 
-1.  **Gerenciamento de Clientes:**
-    -   Cadastro de novos clientes com documento de identificação obrigatório.
-    -   Listagem e atualização de clientes existentes.
-    -   Clientes não são excluídos para manter o histórico.
+## 📚 Conceitos Aplicados
 
-2.  **Gerenciamento de Produtos:**
-    -   Cadastro de novos produtos com nome e preço.
-    -   Listagem e atualização de produtos existentes.
-    -   Produtos não são excluídos para manter o histórico.
+- Encapsulamento: Uso de getters e setters.
+- Polimorfismo e Interfaces: Implementação do GenericRepository.
+- Generics: Repositório genérico para diferentes entidades.
+- Enum: Controle de status da venda.
+- Coleções: Manipulação de listas para armazenar dados.
+  
+## 📋 Regras de Negócio
 
-3.  **Fluxo de Venda (Pedido):**
-    -   Criação de um novo pedido associado a um cliente.
-    -   Adição, remoção e alteração da quantidade de itens (produtos) em um pedido.
-    -   O preço do item no pedido pode ser diferente do preço do produto original.
-    -   Fluxo de status do pedido:
-        -   **ABERTO:** Pode receber, remover ou alterar itens.
-        -   **AGUARDANDO PAGAMENTO:** O pedido é finalizado, tem pelo menos um item e valor > 0.
-        -   **PAGO:** O pagamento foi processado com sucesso.
-        -   **FINALIZADO:** O pedido foi entregue ao cliente.
+- Todo cliente deve ter documento de identificação.
+- Pedido inicia com status **"Aberto"**.
+- Pedido deve ter **data de criação**.
+- Pedido pode receber itens enquanto estiver **"Aberto"**.
+- Valor de venda do item pode ser diferente do valor do produto.
+- Pedido só pode ser finalizado se tiver **ao menos um item** e **valor maior que zero**.
+- Após finalização, status muda para **"Aguardando pagamento"** e cliente é notificado.
+- Pagamento só pode ocorrer se status for **"Aguardando pagamento"**.
+- Após pagamento, status muda para **"Pago"** e cliente é notificado.
+- Após pagamento, pedido pode ser entregue e status muda para **"Finalizado"**.
 
-## Estrutura do Projeto
--   **`src/main/java/ada/commerce/model`:** Contém as classes de modelo (Cliente, Produto, Pedido, ItemPedido) que representam as entidades do negócio.
--   **`src/main/java/ada/commerce/repository`:** A classe `RepositorioEmMemoria<T>` utiliza o conceito de **Generic** para armazenar e gerenciar diferentes tipos de dados em memória, como Clientes, Produtos e Pedidos.
--   **`src/main/java/ada/commerce/service`:** A classe `AdaCommerceService` encapsula a lógica de negócio, orquestrando as operações de CRUD e o fluxo de vida do pedido.
--   **`src/main/java/ada/commerce/main`:** A classe `Main` contém o ponto de entrada do programa, demonstrando o uso das funcionalidades.
+## ▶️ Como Executar
+- Clone o repositório: git clone https://github.com/seu-usuario/AdaCommerce.git
+- Abra o projeto em uma IDE de sua preferencia.
+- Compile e execute a classe AdaCommerceApplication.
 
-## Como Executar o Projeto
-1.  Clone este repositório para sua máquina local.
-    `git clone https://github.com/seu-usuario/adacommerce.git`
-2.  Abra o projeto em sua IDE de preferência.
-3.  Execute a classe `AdaCommerceApplication` para ver o fluxo de exemplo em ação.
-# adaecommerce
-# AdaCommerce
+##👩‍💻 Autora
+Regiane Gomes
+
+
+
+
+   
