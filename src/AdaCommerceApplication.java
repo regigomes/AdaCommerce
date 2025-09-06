@@ -2,17 +2,15 @@
 public class AdaCommerceApplication {
 
     public static void main(String[] args) {
-        // O código aqui dentro é EXATAMENTE O MESMO da versão com pacotes.
-        // --- 1. CONFIGURAÇÃO INICIAL ---
+
         GenericRepository<Cliente> clienteRepository = new InMemoryRepository<>();
         GenericRepository<Produto> produtoRepository = new InMemoryRepository<>();
         NotificationService notificationService = new NotificationService();
 
-        System.out.println("=== Bem-vindo ao Ada Commerce ===");
+        System.out.println("=== Bem-vindo ao Ada Commerce sua plataforma de e-commerce ===");
 
-        // --- 2. CADASTRO DE CLIENTES E PRODUTOS ---
         System.out.println("\n--- Cadastrando Clientes e Produtos ---");
-        Cliente cliente1 = new Cliente("Ana Silva", "111.222.333-44", "ana.silva@email.com");
+        Cliente cliente1 = new Cliente("Regiane Gomes", "111.222.333-44", "regianegomes@gmail.com");
         Produto produto1 = new Produto("Notebook Gamer", 5000.00);
         Produto produto2 = new Produto("Mouse sem fio", 150.00);
 
@@ -25,7 +23,7 @@ public class AdaCommerceApplication {
         System.out.println("Produtos cadastrados:");
         produtoRepository.listarTodos().forEach(System.out::println);
 
-        // --- 3. CICLO DE VIDA DA VENDA ---
+
         System.out.println("\n--- Iniciando uma nova Venda ---");
         Venda venda = new Venda(cliente1);
         System.out.println("Status inicial da venda: " + venda.getStatus());
@@ -37,7 +35,7 @@ public class AdaCommerceApplication {
 
         System.out.println("\nTotal parcial da Venda: R$" + venda.calcularTotal());
 
-        // Finalizando o pedido
+
         System.out.println("\n--- Finalizando o Pedido ---");
         if (!venda.getItens().isEmpty() && venda.calcularTotal() > 0) {
             venda.setStatus(StatusVenda.AGUARDANDO_PAGAMENTO);
@@ -45,7 +43,7 @@ public class AdaCommerceApplication {
             notificationService.enviarEmail(venda.getCliente(), "Seu pedido foi realizado e está aguardando pagamento.");
         }
 
-        // Realizando o pagamento
+
         System.out.println("\n--- Processando Pagamento ---");
         if (venda.getStatus() == StatusVenda.AGUARDANDO_PAGAMENTO) {
             venda.setStatus(StatusVenda.PAGO);
@@ -53,7 +51,6 @@ public class AdaCommerceApplication {
             notificationService.enviarEmail(venda.getCliente(), "Seu pagamento foi confirmado!");
         }
 
-        // Enviando o pedido
         System.out.println("\n--- Enviando o Pedido para Entrega ---");
         if (venda.getStatus() == StatusVenda.PAGO) {
             venda.setStatus(StatusVenda.FINALIZADO);
