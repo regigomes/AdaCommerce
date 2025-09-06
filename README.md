@@ -48,7 +48,7 @@ Simular um sistema simples de e-commerce com as seguintes funcionalidades:
 - Abra o projeto em uma IDE de sua preferencia.
 - Compile e execute a classe AdaCommerceApplication.
 
-##👩‍💻 Autora
+## 👩‍💻Autora
 Regiane Gomes
 
 
