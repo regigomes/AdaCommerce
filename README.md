@@ -44,3 +44,4 @@ O sistema oferece as seguintes funcionalidades principais:
 2.  Abra o projeto no IntelliJ IDEA ou em sua IDE de preferência.
 3.  Execute a classe `Main` para ver o fluxo de exemplo em ação.
 # adaecommerce
+# AdaCommerce
