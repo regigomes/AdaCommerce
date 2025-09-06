@@ -44,7 +44,7 @@ Simular um sistema simples de e-commerce com as seguintes funcionalidades:
 - Após pagamento, pedido pode ser entregue e status muda para **"Finalizado"**.
 
 ## ▶️ Como Executar
-- Clone o repositório: git clone https://github.com/seu-usuario/AdaCommerce.git
+- Clone o repositório: git clone https://github.com/regigomes/AdaCommerce.git
 - Abra o projeto em uma IDE de sua preferencia.
 - Compile e execute a classe AdaCommerceApplication.
 
