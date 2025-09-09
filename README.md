@@ -8,7 +8,7 @@ Simular um sistema simples de e-commerce com as seguintes funcionalidades:
 - Adição e remoção de itens
 - Pagamento e entrega
 
-## 🛠️ Funcionalidades
+##  Funcionalidades
 ✔️Cadastro de Clientes e Produtos.
 ✔️Gerenciamento de Vendas com múltiplos itens.
 ✔️Cálculo do total da venda.
@@ -16,13 +16,13 @@ Simular um sistema simples de e-commerce com as seguintes funcionalidades:
 ✔️Simulação de envio de notificações por e-mail.
 ✔️Implementação de repositório genérico com armazenamento em memória.
 
-## 💻 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 ✔️Java 17+
 ✔️POO (Classes, Objetos, Encapsulamento)
 ✔️Interfaces e Generics
 ✔️Coleções (List, ArrayList)
 
-## 📚 Conceitos Aplicados
+## Conceitos Aplicados
 
 - Encapsulamento: Uso de getters e setters.
 - Polimorfismo e Interfaces: Implementação do GenericRepository.
@@ -30,7 +30,7 @@ Simular um sistema simples de e-commerce com as seguintes funcionalidades:
 - Enum: Controle de status da venda.
 - Coleções: Manipulação de listas para armazenar dados.
   
-## 📋 Regras de Negócio
+## Regras de Negócio
 
 - Todo cliente deve ter documento de identificação.
 - Pedido inicia com status **"Aberto"**.
@@ -43,7 +43,7 @@ Simular um sistema simples de e-commerce com as seguintes funcionalidades:
 - Após pagamento, status muda para **"Pago"** e cliente é notificado.
 - Após pagamento, pedido pode ser entregue e status muda para **"Finalizado"**.
 
-## ▶️ Como Executar
+## Como Executar
 - Clone o repositório: git clone https://github.com/regigomes/AdaCommerce.git
 - Abra o projeto em uma IDE de sua preferencia.
 - Compile e execute a classe AdaCommerceApplication.
