@@ -49,6 +49,9 @@ Simular um sistema simples de e-commerce com as seguintes funcionalidades:
 ## 👩‍💻Autora
 Regiane Gomes
 
+*Projeto desenvolvido como parte de estudos em programação orientada a objeto Java *
+
+
 
 
 
